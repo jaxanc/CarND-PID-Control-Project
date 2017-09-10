@@ -16,4 +16,4 @@ The tuning started with proportional term only. However it was not enough. Every
 
 I quickly introduced a large derivative term. This makes the controller good at staying in a straight line but less effect at making sharp terms.
 
-The integral term was then implemented to better handle the sharp terms.
+The integral term was then implemented to better handle the sharp terms. The three parameters were then shifted up and down by monitoring the total error to balance the behavior between straight line and sharp turns.
