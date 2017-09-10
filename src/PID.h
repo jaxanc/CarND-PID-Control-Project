@@ -18,6 +18,18 @@ public:
   double Kd;
 
   /*
+  * Output limits
+  */
+  double minOutput;
+  double maxOutput;
+
+  /*
+  * Control
+  */
+  double control;
+  double totalError;
+
+  /*
   * Constructor
   */
   PID();
@@ -30,12 +42,12 @@ public:
   /*
   * Initialize PID.
   */
-  void Init(double Kp, double Ki, double Kd);
+  void Init(double Kp, double Ki, double Kd, double minOutput, double maxOutput);
 
   /*
   * Update the PID error variables given cross track error.
   */
-  void UpdateError(double cte);
+  double UpdateError(double cte);
 
   /*
   * Calculate the total PID error.
